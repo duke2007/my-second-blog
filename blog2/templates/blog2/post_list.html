@@ -1,19 +1,32 @@
+{% load staticfiles %}
 <html>
 	<head>
 		<title>Duke's blog</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
+		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 	</head>
 	<body>
-		<div>
+	
+		<div class="header">
 			<h1><a href="">Blogul lui Duke</a></h1>
 		</div>
 		
-		{% for post in posts %}
-			<div>
-				<p>published: {{ post.published_date }}</p>
-				<h1><a href="">{{ post.title }}</a></h1>
-				<p>{{ post.text|linebreaks }}</p>
-			</div>
+	<div class="content container">
+		<div class="row">
+			<div class="col-md-8">
+				{% for post in posts %}
+					<div class="post">
+						<div class="date">
+							<p>published: {{ post.published_date }}</p>
+						</div>
+						<h1><a href="">{{ post.title }}</a></h1>
+						<p>{{ post.text|linebreaks }}</p>
+					</div>
 		{% endfor %}
-		
-	</body>
+		</div>
+	</div>
+</div>	
+</body>
 </html>
