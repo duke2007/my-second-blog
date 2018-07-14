@@ -1,15 +1,40 @@
 {% extends 'blog2/base.html' %}
+{% load blog2_tags %}
+{% load static from staticfiles %}
+	
+{% block content %}
+	<div class="post">
+		{% if post.published_date %}
+			<div class="date">
+				{{ post.published_date }}
+			</div>
+		{% endif %}
+		<h1>{{ post.title }}</h1>
+		{% if post.image != None %}
+		<img src="{{ post.image.url }}" width="150" height="150" />
+		{% endif %}
+			<p>{{ post.text|markdown }}</p>
 			
-			{% block content %}
-				<div class="post">
-				{% if post.published_date %}
-						<div class="date">
-							{{ post.published_date }}
-						</div>
-				{% endif %}
-						<h1>{{ post.title }}</h1>
-						<p>{{ post.text|linebreaksbr }}</p>
-					</div>
-				
-			{% endblock %}	
+			
+			<!--comentarii disqus bagate de mine-->
+			
+	<div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+        this.page.identifier = 'post-{{ post.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://duke2007-2.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+       (d.head || d.body).appendChild(s);
+     })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+			<!--sfarsit comentarii disqus-->
+
+	</div>
+{% endblock %}	
 		

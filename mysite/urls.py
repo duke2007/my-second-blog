@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from blog2 import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 	path('', include('blog2.urls', namespace='blog2')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )

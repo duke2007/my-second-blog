@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load static from staticfiles %}
+
 <html>
 	<head>
 		<title>Duke's blog</title>
@@ -11,6 +13,9 @@
 	
 		<div class="page-header">
 			<h1><a href="/">Blogul lui Duke</a></h1>
+				<div class="slogan">
+					<small>Un blog politic</small>
+				</div>
 		</div>
 		<div class="content container">
 			<div class="row">
@@ -18,8 +23,15 @@
 				{% block content %}
 				{% endblock %}
 				</div>
+				<div class="sidebar">
+					<h2>Blogul lui Duke</h2>
+					<p>Acesta e blogul meu</p>
+				</div>
 			</div>
 		</div>
 		
+		<div class="footer">
+			<p>&#169; Mircea Prodan, 2018</p>
+		</div>
 </body>
 </html>

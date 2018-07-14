@@ -3,6 +3,7 @@ from django.utils import timezone
 from . models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+
 def post_list(request):
 	object_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
 	paginator = Paginator(object_list, 3)  #3 postari pe pagina
@@ -19,4 +20,6 @@ def post_list(request):
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	return render(request, 'blog2/post_detail.html', {'post': post})
+	
+	
 
