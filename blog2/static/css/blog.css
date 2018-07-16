@@ -7,8 +7,9 @@ body {
 	padding: 0 0 30px 25px;
 }
 .page-header {
+	width: 960px;
 	background-color: #000000;
-	margin-top: 10px;
+	margin: 10px 0 0 140px ;
 	padding: 30px 20px 20px 60px;
 }
 .slogan{
@@ -16,20 +17,29 @@ body {
 	padding: 0 0 0 20px;
 }
 
+a {
+	color: #fca205;
+}
+
 .page-header h1, .header h1 a, .header h1 a:visited, .header h1 a:active {
 	color: #000000;
 	font-size:36pt;
 	text-decoration: underline;
 }
-.content {
+.content-container {
 	margin-left: 40px;
+	width: 960px;
+	padding-top: 20px;
+	margin: 0 0 0 140px
 }
 h1, h2, h3, h4, blockquote, p {
 	padding-left: 15px;
 	font-family: 'Merriweather', serif, cursive;
+	
 }
 .date {
 	color: #828282;
+	padding: 0 0 0 18px;
 }
 .save {
 	float:right;
@@ -49,28 +59,58 @@ h1, h2, h3, h4, blockquote, p {
 .post h1 a, .post h1 a:visited {
 	color: #000000;
 }
+
+/*Navigatia*/
+
+#nav-top ul {
+  width: 960px;
+  list-style: none;
+  background-color: #000;
+  text-align: left;
+  padding: 5px 0 5px 60px;
+  margin: 10px 0 0 140px;
+  color:#fca205;
+}
+
+#nav-top li{
+	display: inline;
+	font-size:20px;
+	padding:20px;
+	width: 470px;
+	color:#fca205;
+}
+
+#nav-top a:hover{
+	color:#fca205;
+}
+
+
+/*Sidebar-ul*/
+
 .sidebar{
-	float:right;
-	width:300px;
+	float: right;
+	text-align: left;
+	width:260px;
 	background-color: #efe5d0;
-	padding: 25px 0 0 45px;
+	padding: 100px 20px 0 20px;
 	font-size: 15px;
-	tex-align: center;
 	display: inline;
 	border-width: 5px;
 	border-style: solid;
 	border-color: #fff;
-	height: 600px;
+	height: 450px;
+	margin:15px 0 0 65px;
 }
 
 .footer {
-	width: 250px;
-	background-color: #efe5d0;
-	height: 50px;
-	padding: 10px 0 0 25px;
-	margin: 10px 10px 10px 150px;
+	width: 960px;
+	background-color: #000;
+	height: 100px;
+	padding: 35px 0 0 25px;
+	margin: 10px 10px 10px 140px;
 	font-size: 90%;
-	align: center;
+	text-align: center;
+	color: #fca205;
 }
 
 

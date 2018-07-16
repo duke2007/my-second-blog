@@ -10,10 +10,7 @@
 			</div>
 		{% endif %}
 		<h1>{{ post.title }}</h1>
-		{% if post.image != None %}
-		<img src="{{ post.image.url }}" width="150" height="150" />
-		{% endif %}
-			<p>{{ post.text|markdown }}</p>
+		<p>{{ post.text|safe }}</p>
 			
 			
 			<!--comentarii disqus bagate de mine-->

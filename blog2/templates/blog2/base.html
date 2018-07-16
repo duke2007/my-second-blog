@@ -7,6 +7,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js">
 		<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 	</head>
 <body>
@@ -15,20 +16,42 @@
 			<h1><a href="/">Blogul lui Duke</a></h1>
 				<div class="slogan">
 					<small>Un blog politic</small>
-				</div>
+				</div>		 
 		</div>
-		<div class="content container">
+		
+		<!--Nav-top - navigatia(meniul)-->
+		<div id="nav-top">
+			<ul class="nav">
+				<li><a href="/about/">About/Contact</a></li>
+			</ul>
+		</div>
+		
+		<!-- container-->
+		<div class="content-container">
 			<div class="row">
 				<div class="col-md-8">
 				{% block content %}
 				{% endblock %}
 				</div>
+		
+		<!--Sidebar-->		
 				<div class="sidebar">
-					<h2>Blogul lui Duke</h2>
-					<p>Acesta e blogul meu</p>
+					<h2>Site-urile mele</h2>
+					
+		
+		<ul>
+		    
+			<li><a href="http://mirceaprodan.com">mirceaprodan.com - Comentarii politice de top</a></li>
+			<li><a href="http://negustori.net">negustori - Carti, muzica, filme</a></li>
+			<li><a href="http://blogertops.com">blogertops-creare website-uri</a></li>
+			
+		</ul>
+
 				</div>
 			</div>
 		</div>
+		
+		<!--Footer-->
 		
 		<div class="footer">
 			<p>&#169; Mircea Prodan, 2018</p>

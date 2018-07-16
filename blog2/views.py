@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from . models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from django.views.generic import TemplateView
 
 def post_list(request):
 	object_list = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
@@ -20,6 +20,9 @@ def post_list(request):
 def post_detail(request, pk):
 	post = get_object_or_404(Post, pk=pk)
 	return render(request, 'blog2/post_detail.html', {'post': post})
-	
-	
+		
 
+class AboutBlog2View(TemplateView):
+	template_name = 'about.html'
+	
+	
