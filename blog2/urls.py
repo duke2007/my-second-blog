@@ -10,4 +10,6 @@ urlpatterns = [
 	path('<int:pk>/', views.post_detail, name='post_detail'),
 	#path('', views.HomeBlog2View.as_view(), name='home'),
 	path('about/', views.AboutBlog2View.as_view(), name='about'),
+	path('contact/', views.ContactBlog2View.as_view(), name='contact'),
+	path('news/', views.NewsBlog2View.as_view(), name='news'),
 ]

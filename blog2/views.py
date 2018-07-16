@@ -25,4 +25,10 @@ def post_detail(request, pk):
 class AboutBlog2View(TemplateView):
 	template_name = 'about.html'
 	
+class ContactBlog2View(TemplateView):
+	template_name = 'contact.html'
+	
+class NewsBlog2View(TemplateView):
+	template_name = 'news.html'
+	
 	
