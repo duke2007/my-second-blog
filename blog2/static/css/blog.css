@@ -5,6 +5,9 @@ h1 a {
 }
 body {
 	padding: 0 0 30px 25px;
+	font-size: 100%;
+	background-color: #efefef;
+	text-align: left;
 }
 .page-header {
 	width: 960px;
@@ -30,11 +33,14 @@ a {
 	margin-left: 40px;
 	width: 960px;
 	padding-top: 20px;
-	margin: 0 0 0 140px
+	margin: 0 0 0 140px;
+	border: 4px double #000;
+	
 }
 h1, h2, h3, h4, blockquote, p {
 	padding-left: 15px;
-	font-family: 'Merriweather', serif, cursive;
+	font-family: "Trebuchet MS",'Merriweather', serif, cursive;
+	
 	
 }
 .date {
@@ -66,8 +72,8 @@ h1, h2, h3, h4, blockquote, p {
   width: 960px;
   list-style: none;
   background-color: #000;
-  text-align: left;
-  padding: 20px 0 5px 60px;
+  text-align: right;
+  padding: 20px 50px 5px 60px;
   margin: 10px 0 0 140px;
   color:#fca205;
   overflow: hidden;
@@ -104,11 +110,11 @@ h1, h2, h3, h4, blockquote, p {
 	padding: 100px 20px 0 20px;
 	font-size: 15px;
 	display: inline;
-	border-width: 5px;
+	border-width: 2px;
 	border-style: solid;
 	border-color: #fff;
 	height: 450px;
-	margin:15px 0 0 65px;
+	margin:15px 0 0 20px;
 }
 .reclama{
 	float:right;
@@ -122,6 +128,10 @@ h1, h2, h3, h4, blockquote, p {
 	border-color: #fff;
 	height: 450px;
 	margin:15px 0 0 65px;
+}
+
+#disqus-thread{
+	margin: 0 0 0 15px;
 }
 
 .footer {

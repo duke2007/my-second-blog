@@ -25,3 +25,4 @@ urlpatterns = [
 	path('', include('blog2.urls', namespace='blog2')),
 	path('tinymce/', include('tinymce.urls')),
 ] 
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
